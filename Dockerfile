@@ -1,8 +1,6 @@
-FROM tomcat:9.0-jdk17-temurin
+FROM tomee:10-jdk17-webprofile
 
-WORKDIR /app
-
-COPY ROOT.war /usr/local/tomcat/webapps/ROOT.war
+COPY ROOT.war /usr/local/tomee/webapps/ROOT.war
 
 EXPOSE 8080
 
