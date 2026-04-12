@@ -1,7 +1,5 @@
-FROM tomee:9.1.2-jre17-webprofile
+# Use a Linix image with Tomcat 10
+FROM tomcat:10.1.0-M5-jdk16-openjdk-slim-bullseye
 
-COPY ROOT.war /usr/local/tomee/webapps/ROOT.war
-
-EXPOSE 8080
-
-CMD ["catalina.sh", "run"]
+# Copy in our ROOT.war to the right place in the container
+COPY ROOT.war /usr/local/tomcat/webapps/
