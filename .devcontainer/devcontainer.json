@@ -1,0 +1,13 @@
+{
+  "name": "Project4 Codespace",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Tomcat",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
