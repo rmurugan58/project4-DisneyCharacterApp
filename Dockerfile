@@ -1,7 +1,5 @@
-FROM tomee:10-jdk17-webprofile
+# Use a Linix image with Tomcat 10
+FROM tomcat:10.1-jdk21-temurin
 
-COPY ROOT.war /usr/local/tomee/webapps/ROOT.war
-
-EXPOSE 8080
-
-CMD ["catalina.sh", "run"]
+# Copy in our ROOT.war to the right place in the container
+COPY ROOT.war /usr/local/tomcat/webapps/
